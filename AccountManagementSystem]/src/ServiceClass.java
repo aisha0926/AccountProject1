@@ -4,17 +4,21 @@ import java.util.Map.Entry;
 
 public class ServiceClass {
 
-	public static void main(String args[]) {
-		Map<Object, String> accounts = new HashMap<Object, String>();
-		
-		Account acc = new Account("Test", "This","12341");
-		Account acc2 = new Account("NUmber2", "NM2","8583");
-		accounts.put(acc, "Name");
-		accounts.put(acc2, "Number3");
-		
-		System.out.println(accounts.size());
-		
+	Map<Integer, Account> accounts = new HashMap<Integer, Account>();
+
+	public ServiceClass() {
 
 	}
+
+	public void addAccount(Account a) {
+		accounts.put(a.getId(), a);
+	}
+
+	public void removeAcc(int id) {
+		accounts.remove(id);
+	}
+public Account getAccount(int id) {
 	
+	return this.accounts.get(id);
+}
 }
