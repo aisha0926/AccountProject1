@@ -14,6 +14,10 @@ public class ServiceClass {
 		
 		System.out.println(accounts.size());
 		
+		for(Object key: accounts.keySet()) {
+			
+		}
+		
 
 	}
 	
