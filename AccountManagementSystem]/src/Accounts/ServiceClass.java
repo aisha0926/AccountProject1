@@ -29,7 +29,7 @@ public class ServiceClass {
 		return this.accounts.get(id);
 	}
 	
-	public void updateAccount(Account id, String fName, String lName) {
+	public void updateAccount(int id, String fName, String lName) {
 		
 		Account acc = new Account();
 		for (Integer key: accounts.keySet()) {
@@ -54,6 +54,7 @@ public class ServiceClass {
 	}
 	
 	public String convertToJSON(int id) {
+		//ServiceClass gettingAccount = new ServiceClass();
 		Gson gson = new Gson();
 		GsonBuilder builder = new GsonBuilder();
 	    builder.setPrettyPrinting();
@@ -61,6 +62,17 @@ public class ServiceClass {
 	    String jsonStr = gson.toJson(getAccount(id));   
 	    return jsonStr;
 	}
+	
+	public String convertToJSON() {
+		//ServiceClass gettingAccount = new ServiceClass();
+		Gson gson = new Gson();
+		GsonBuilder builder = new GsonBuilder();
+	    builder.setPrettyPrinting();
+	    gson = builder.create(); 
+	    String jsonStr = gson.toJson(accounts);   
+	    return jsonStr;
+	}
+	
 	
 	public String convertJSONToJava() {
 		return null;
