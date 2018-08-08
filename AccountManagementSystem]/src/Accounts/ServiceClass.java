@@ -29,13 +29,13 @@ public class ServiceClass {
 		return this.accounts.get(id);
 	}
 	
-	public void updateAccount(int id, String fName, String lName) {
+	public void updateAccount() {
 		
 		Account acc = new Account();
 		for (Integer key: accounts.keySet()) {
 			if(key.equals(acc.getId())) {		
-				acc.setfName(fName);
-				acc.setlName(lName);
+				acc.setfName("TEST");
+				acc.setlName("TEST");
 			}			
 		}		
 	}
