@@ -1,3 +1,4 @@
+package Accounts;
 
 public class Account {
 	private String fName;
@@ -40,8 +41,7 @@ public class Account {
 		this.accNumber = accNumber;
 	}
 	
-	public String toString() {
-		
+	public String toString() {		
 		return this.id+" "+this.fName+" "+this.lName+" "+this.accNumber;
 	}
 }

@@ -1,6 +1,7 @@
+package Accounts;
+
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Map.Entry;
 
 public class ServiceClass {
 
@@ -17,8 +18,9 @@ public class ServiceClass {
 	public void removeAcc(int id) {
 		accounts.remove(id);
 	}
-public Account getAccount(int id) {
-	
-	return this.accounts.get(id);
-}
+
+	public Account getAccount(int id) {
+
+		return this.accounts.get(id);
+	}
 }
