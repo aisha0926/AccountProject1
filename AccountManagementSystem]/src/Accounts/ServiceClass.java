@@ -82,9 +82,35 @@ public class ServiceClass {
 
 		for(Integer key : accounts.keySet()) {
 			count+=key;
+		}	
+		return count;
+	}
+	
+	public int cyclingThroughFirstName(String name) {
+		int counter = 0;
+		for(Account value: accounts.values()) {
+			if(accounts.containsValue(name)) {
+				return counter++;
+			}
+			break;
 		}
 		
-		return count;
+		return counter;
+	}
+	
+	public int cyclingThrough(String name) {
+		int counter = 0;
+		Iterator it = accounts.entrySet().iterator();
+		while(it.hasNext()) {
+			for(Account value: accounts.values()) {
+				if(value.getfName().equals(name)) {
+					counter++;
+				}
+			}
+			break;
+		}
+		return counter;
+		
 	}
 
 }
