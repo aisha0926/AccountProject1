@@ -77,28 +77,15 @@ public class ServiceClass {
 		return null;
 	}
 
-	public int cycle() {
+	public int cyclingEveryEntryInHash() {
 		int count = 0;
-
 		for(Integer key : accounts.keySet()) {
-			count+=key;
+			count++;
 		}	
 		return count;
 	}
 	
 	public int cyclingThroughFirstName(String name) {
-		int counter = 0;
-		for(Account value: accounts.values()) {
-			if(accounts.containsValue(name)) {
-				return counter++;
-			}
-			break;
-		}
-		
-		return counter;
-	}
-	
-	public int cyclingThrough(String name) {
 		int counter = 0;
 		Iterator it = accounts.entrySet().iterator();
 		while(it.hasNext()) {
