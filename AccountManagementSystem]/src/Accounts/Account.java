@@ -1,9 +1,14 @@
+package Accounts;
 
 public class Account {
+	private int id;
 	private String fName;
 	private String lName;
 	private String accNumber;
-	private int id;
+	
+	public Account() {
+		
+	}
 	
 	public Account(int iD,String firstName, String lastName, String accountNumber) {
 		this.fName = firstName;
@@ -11,6 +16,7 @@ public class Account {
 		this.accNumber = accountNumber;
 		this.id = iD;
 	}
+	
 
 	public int getId() {
 		return id;
@@ -40,8 +46,8 @@ public class Account {
 		this.accNumber = accNumber;
 	}
 	
+	@Override
 	public String toString() {
-		
-		return this.id+" "+this.fName+" "+this.lName+" "+this.accNumber;
+		return "Account [id=" + id + ", fName=" + fName + ", lName=" + lName + ", accNumber=" + accNumber + "]";
 	}
 }
